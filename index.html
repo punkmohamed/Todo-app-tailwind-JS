@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body class="bg-custom-pink text-xl sm:text-2xl flex justify-center items-center min-h-screen p-4 px-5 sm:px-10">
+    <div class="bg-custom-pink p-5 rounded-lg shadow-md w-full max-w-3xl">
+        <div class="text-center mb-6">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-700">Today's</h1>
+            <h1 class="text-6xl sm:text-7xl font-bold text-slate-600 mb-2">to do list:</h1>
+            <div class="border-t-2 border-dotted border-gray-400 w-1/2 mx-auto"></div>
+        </div>
+        <div class="flex mb-2 text-base sm:text-2xl text-gray-600 font-semibold">
+            <div class="w-1/4 text-center">tick when done</div>
+            <div class="w-3/4 pl-2 text-base sm:text-2xl">task</div>
+        </div>
+
+        <div id="task-list">
+            <!-- task list will go here  -->
+        </div>
+        <div class="mt-6">
+            <p class="text-2xl sm:text-3xl text-gray-600 mb-2">my main goal for today is:</p>
+            <input type="text" id="new-task-input" placeholder="Add a new task..."
+                class="w-full py-2 text-2xl sm:text-3xl bg-transparent border-b border-gray-300 focus:outline-none focus:border-gray-500" />
+        </div>
+        <div class="flex justify-between mt-4">
+            <button id="add-task"
+                class="flex items-center bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 text-lg sm:text-xl">
+                <i class="fas fa-plus mr-2"></i> Add
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

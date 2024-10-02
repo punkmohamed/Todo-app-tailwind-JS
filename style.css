@@ -1,0 +1,30 @@
+body {
+    font-family: 'Caveat', cursive;
+    background-color: #f8dfe2;
+}
+
+.bg-custom-pink {
+    background-color: #faedef;
+}
+
+.task-item {
+    transition: all 0.3s ease;
+}
+
+.task-item.removing {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.task-item.adding {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
