@@ -1,6 +1,8 @@
 
 let taskLocal = JSON.parse(localStorage.getItem('todo') || '[]');
 
+
+const toHide = document.getElementById('toHide');
 const taskList = document.getElementById('task-list');
 const addTaskButton = document.getElementById('add-task');
 const newTaskInput = document.getElementById('new-task-input');
@@ -12,6 +14,13 @@ console.log(taskLocal, 'taskLocal');
 //getting the data from local storage and present it in html
 const getTodo = () => {
     taskList.innerHTML = '';
+    if (taskLocal.length > 0) {
+        toHide.classList.remove('hidden');
+    } else {
+        toHide.classList.add('hidden');
+
+    }
+    toHide
     taskLocal.forEach((todo, index) => {
         const taskItem = document.createElement('div')
         taskItem.className = 'task-item flex items-center mb-4 text-base sm:text-lg adding';
