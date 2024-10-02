@@ -38,7 +38,7 @@ const getTodo = () => {
         const taskDescription = document.createElement('div');
         taskDescription.className = 'flex-grow grid grid-cols-4 gap-2 items-center';
         const taskTextElement = document.createElement('span');
-        taskTextElement.className = 'col-span-3 py-1 bg-transparent border-b border-gray-300 focus:outline-none focus:border-gray-500 overflow-hidden text-ellipsis text-2xl';
+        taskTextElement.className = 'break-words col-span-3 py-1 bg-transparent border-b border-gray-300 focus:outline-none focus:border-gray-500 overflow-hidden text-ellipsis text-2xl';
         taskTextElement.innerText = todo.text;
         taskDescription.appendChild(taskTextElement);
         taskItem.appendChild(circleContainer);
